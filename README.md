@@ -54,7 +54,7 @@ The task of JSON-fixing involves providing a model with an invalid JSON string t
   c)Improve Error Detection: Cases where the model introduces new errors indicate a need to improve its error detection and correction algorithms. This could involve refining rules or incorporating more sophisticated logic.
   d)Optimize Performance: Understanding the distribution of execution times can help optimize the model’s performance, making it more suitable for real-time applications.
 
-5.Instructions to run your code so we can reproduce these tests
+## 5.Instructions to run your code so we can reproduce these tests
   a)I have added code in code.py file in the same code repository just add the Deepinfra API key and run the code.py file as I have added sample data in code itself it will reproduce the result.
 
 ## Enhancements-
