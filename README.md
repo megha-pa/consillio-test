@@ -8,10 +8,10 @@ The task of JSON-fixing involves providing a model with an invalid JSON string t
 
 1.2)Error Injection:
 
-  a)Error Types: Introduce common JSON errors into the valid JSON samples. These errors can include:
-  b)Syntax Errors: Missing commas, incorrect brackets, or unmatched quotation marks.
-  c)Structural Errors: Incomplete objects, arrays, or mixed types.
-  d)Data Type Errors: Incorrect usage of numbers, strings, booleans, or nulls.
+  * a)Error Types: Introduce common JSON errors into the valid JSON samples. These errors can include:
+  * b)Syntax Errors: Missing commas, incorrect brackets, or unmatched quotation marks.
+  * c)Structural Errors: Incomplete objects, arrays, or mixed types.
+  * d)Data Type Errors: Incorrect usage of numbers, strings, booleans, or nulls.
 
 1.3)Benchmark Creation:
 
