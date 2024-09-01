@@ -1,0 +1,1246 @@
+Benchmarking model: meta-llama/Meta-Llama-3.1-405B-Instruct
+Test Case 1: Correct
+Model Response:
+```
+{
+    "employees": [
+        {"firstName": "John", "lastName": "Doe"},
+        {"firstName": "Anna", "lastName": "Smith"},
+        {"firstName": "Peter", "lastName": "Jones"}
+    ]
+}
+```
+malformed json
+
+    {
+        "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"
+        ]
+    }
+
+Expected JSON:
+
+    {
+        "employees": [
+            {"firstName": "John", "lastName": "Doe"},
+            {"firstName": "Anna", "lastName": "Smith"},
+            {"firstName": "Peter", "lastName": "Jones"}
+        ]
+    }
+
+-----
+Test Case 2: Incorrect
+Model Response:
+{
+        "name": "Alice",
+        "age": 30,
+        "city": "New York"
+}
+malformed json
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+
+Expected JSON:
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+    }
+
+-----
+Test Case 3: Correct
+Model Response:
+{
+        "fruit": "apple",
+        "size": "large",
+        "color": "red"
+    }
+malformed json
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red",
+    }
+
+Expected JSON:
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red"
+    }
+
+-----
+Test Case 4: Correct
+Model Response:
+{
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925
+}
+malformed json
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925,
+
+Expected JSON:
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925
+    }
+
+-----
+Test Case 5: Correct
+Model Response:
+{
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+malformed json
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco"
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+Expected JSON:
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+-----
+Test Case 6: Correct
+Model Response:
+{
+        "movie": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+    }
+malformed json
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan"
+        "year": 2010
+    }
+
+Expected JSON:
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+    }
+
+-----
+Test Case 7: Correct
+Model Response:
+{
+        "car": "Tesla",
+        "model": "Model S",
+        "year": 2022
+}
+malformed json
+
+    {
+        "car": "Tesla",
+        "model": "Model S"
+        "year": 2022,
+
+Expected JSON:
+
+    {
+        "car": "Tesla",
+        "model": "Model S",
+        "year": 2022
+    }
+
+-----
+Test Case 8: Correct
+Model Response:
+{
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+}
+malformed json
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59,
+
+Expected JSON:
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+    }
+
+-----
+Test Case 9: Correct
+Model Response:
+{
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+}
+malformed json
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+
+Expected JSON:
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+    }
+
+-----
+Test Case 10: Correct
+Model Response:
+{
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+}
+malformed json
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+
+Expected JSON:
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+    }
+
+-----
+
+Overall Accuracy: 90.00% across 10 test cases
+Total Time Taken: 14.95 seconds
+Accuracy for meta-llama/Meta-Llama-3.1-405B-Instruct: 90.00%
+Benchmarking model: mistralai/Mistral-Nemo-Instruct-2407
+Test Case 1: Correct
+Model Response:
+{
+    "employees": [
+        {"firstName":"John", "lastName":"Doe"},
+        {"firstName":"Anna", "lastName":"Smith"},
+        {"firstName":"Peter", "lastName":"Jones"}
+    ]
+}
+malformed json
+
+    {
+        "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"
+        ]
+    }
+
+Expected JSON:
+
+    {
+        "employees": [
+            {"firstName": "John", "lastName": "Doe"},
+            {"firstName": "Anna", "lastName": "Smith"},
+            {"firstName": "Peter", "lastName": "Jones"}
+        ]
+    }
+
+-----
+Test Case 2: Incorrect
+Model Response:
+{"name": "Alice", "age": 30, "city": "New York"}
+malformed json
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+
+Expected JSON:
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+    }
+
+-----
+Test Case 3: Correct
+Model Response:
+{
+    "fruit": "apple",
+    "size": "large",
+    "color": "red"
+}
+malformed json
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red",
+    }
+
+Expected JSON:
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red"
+    }
+
+-----
+Test Case 4: Correct
+Model Response:
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published": 1925
+}
+malformed json
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925,
+
+Expected JSON:
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925
+    }
+
+-----
+Test Case 5: Correct
+Model Response:
+{
+  "company": "OpenAI",
+  "location": "San Francisco",
+  "products": ["GPT-3", "Codex", "DALL-E"]
+}
+malformed json
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco"
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+Expected JSON:
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+-----
+Test Case 6: Correct
+Model Response:
+{
+    "movie": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010
+}
+malformed json
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan"
+        "year": 2010
+    }
+
+Expected JSON:
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+    }
+
+-----
+Test Case 7: Correct
+Model Response:
+{"car": "Tesla", "model": "Model S", "year": 2022}
+malformed json
+
+    {
+        "car": "Tesla",
+        "model": "Model S"
+        "year": 2022,
+
+Expected JSON:
+
+    {
+        "car": "Tesla",
+        "model": "Model S",
+        "year": 2022
+    }
+
+-----
+Test Case 8: Incorrect
+Model Response:
+{
+    "country": "Canada",
+    "capital": "Ottawa",
+    "population": 37590000
+malformed json
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59,
+
+Expected JSON:
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+    }
+
+-----
+Test Case 9: Correct
+Model Response:
+{"book": "To Kill a Mockingbird", "author": "Harper Lee", "published": "1960"}
+malformed json
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+
+Expected JSON:
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+    }
+
+-----
+Test Case 10: Correct
+Model Response:
+{"device": "iPhone", "manufacturer": "Apple", "release_year": 2007}
+malformed json
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+
+Expected JSON:
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+    }
+
+-----
+Overall Accuracy: 80.00% across 10 test cases
+Total Time Taken: 7.82 seconds
+Accuracy for mistralai/Mistral-Nemo-Instruct-2407: 80.00%
+Benchmarking model: google/gemma-2-27b-it
+Test Case 1: Correct
+Model Response:
+```json
+{
+  "employees": [
+    { "firstName": "John", "lastName": "Doe" },
+    { "firstName": "Anna", "lastName": "Smith" },
+    { "firstName": "Peter", "lastName": "Jones" }
+  ]
+}
+malformed json
+
+    {
+        "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"
+        ]
+    }
+
+Expected JSON:
+
+    {
+        "employees": [
+            {"firstName": "John", "lastName": "Doe"},
+            {"firstName": "Anna", "lastName": "Smith"},
+            {"firstName": "Peter", "lastName": "Jones"}
+        ]
+    }
+
+-----
+Test Case 2: Incorrect
+Model Response:
+```json
+{
+  "name": "Alice",
+  "age": 30,
+  "city": "New York"
+}
+```
+
+malformed json
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+
+Expected JSON:
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+    }
+
+-----
+Test Case 3: Correct
+Model Response:
+```json
+{
+  "fruit": "apple",
+  "size": "large",
+  "color": "red"
+}
+malformed json
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red",
+    }
+
+Expected JSON:
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red"
+    }
+
+-----
+Test Case 4: Incorrect
+Model Response:
+```json
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published": 1925,
+  "year": 1925
+}
+
+
+
+malformed json
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925,
+
+Expected JSON:
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925
+    }
+
+-----
+Test Case 5: Correct
+Model Response:
+```json
+{
+  "company": "OpenAI",
+  "location": "San Francisco",
+  "products": [
+    "GPT-3",
+    "Codex",
+    "DALL-E"
+  ]
+}
+malformed json
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco"
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+Expected JSON:
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+-----
+Test Case 6: Correct
+Model Response:
+```json
+{"movie": "Inception", "director": "Christopher Nolan", "year": 2010}
+```
+
+malformed json
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan"
+        "year": 2010
+    }
+
+Expected JSON:
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+    }
+
+-----
+Test Case 7: Correct
+Model Response:
+```json
+{
+  "car": "Tesla",
+  "model": "Model S",
+  "year": 2022
+}
+malformed json
+
+    {
+        "car": "Tesla",
+        "model": "Model S"
+        "year": 2022,
+
+Expected JSON:
+
+    {
+        "car": "Tesla",
+        "model": "Model S",
+        "year": 2022
+    }
+
+-----
+Test Case 8: Correct
+Model Response:
+```json
+{
+   "country":"Canada",
+   "capital":"Ottawa",
+   "population":37.59000000
+}
+malformed json
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59,
+
+Expected JSON:
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+    }
+
+-----
+Test Case 9: Incorrect
+Model Response:
+```json
+{
+  "book": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "published": 1960
+}
+```
+
+malformed json
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+
+Expected JSON:
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+    }
+
+-----
+Test Case 10: Correct
+Model Response:
+```json
+{
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+    }
+
+```
+
+malformed json
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+
+Expected JSON:
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+    }
+
+-----
+Overall Accuracy: 70.00% across 10 test cases
+Total Time Taken: 16.16 seconds
+Accuracy for google/gemma-2-27b-it: 70.00%
+Benchmarking model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Test Case 1: Incorrect
+Model Response:
+{
+        "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"}
+    ]
+malformed json
+
+    {
+        "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"
+        ]
+    }
+
+Expected JSON:
+
+    {
+        "employees": [
+            {"firstName": "John", "lastName": "Doe"},
+            {"firstName": "Anna", "lastName": "Smith"},
+            {"firstName": "Peter", "lastName": "Jones"}
+        ]
+    }
+
+-----
+Test Case 2: Incorrect
+Model Response:
+{
+        "name": "Alice",
+        "age": 30,
+        "city": "New York"
+}
+malformed json
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+
+Expected JSON:
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+    }
+
+-----
+Test Case 3: Correct
+Model Response:
+{
+  "fruit": "apple",
+  "size": "large",
+  "color": "red"
+}
+malformed json
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red",
+    }
+
+Expected JSON:
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red"
+    }
+
+-----
+Test Case 4: Correct
+Model Response:
+{
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "published": 1925
+}
+malformed json
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925,
+
+Expected JSON:
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925
+    }
+
+-----
+Test Case 5: Correct
+Model Response:
+{
+    "company": "OpenAI",
+    "location": "San Francisco",
+    "products": [
+        "GPT-3",
+        "Codex",
+        "DALL-E"
+    ]
+}
+malformed json
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco"
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+Expected JSON:
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+-----
+Test Case 6: Correct
+Model Response:
+{
+    "movie": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010
+}
+malformed json
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan"
+        "year": 2010
+    }
+
+Expected JSON:
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+    }
+
+-----
+Test Case 7: Correct
+Model Response:
+{
+    "car": "Tesla",
+    "model": "Model S",
+    "year": 2022
+}
+malformed json
+
+    {
+        "car": "Tesla",
+        "model": "Model S"
+        "year": 2022,
+
+Expected JSON:
+
+    {
+        "car": "Tesla",
+        "model": "Model S",
+        "year": 2022
+    }
+
+-----
+Test Case 8: Correct
+Model Response:
+{
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+}
+malformed json
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59,
+
+Expected JSON:
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+    }
+
+-----
+Test Case 9: Correct
+Model Response:
+{
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+}
+malformed json
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+
+Expected JSON:
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+    }
+
+-----
+Test Case 10: Correct
+Model Response:
+{
+  "device": "iPhone",
+  "manufacturer": "Apple",
+  "release_year": 2007
+}
+malformed json
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+
+Expected JSON:
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+    }
+
+-----
+Overall Accuracy: 80.00% across 10 test cases
+Total Time Taken: 7.35 seconds
+Accuracy for meta-llama/Meta-Llama-3.1-8B-Instruct: 80.00%
+Benchmarking model: google/gemma-2-9b-it
+Test Case 1: Correct
+Model Response:
+```json
+{
+"employees":[
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+]
+}
+```
+malformed json
+
+    {
+        "employees":[
+            {"firstName":"John", "lastName":"Doe"},
+            {"firstName":"Anna", "lastName":"Smith"},
+            {"firstName":"Peter", "lastName":"Jones"
+        ]
+    }
+
+Expected JSON:
+
+    {
+        "employees": [
+            {"firstName": "John", "lastName": "Doe"},
+            {"firstName": "Anna", "lastName": "Smith"},
+            {"firstName": "Peter", "lastName": "Jones"}
+        ]
+    }
+
+-----
+Test Case 2: Incorrect
+Model Response:
+```json
+{
+"name": "Alice",
+"age": 30,
+"city": "New York"
+}
+```
+malformed json
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+
+Expected JSON:
+
+    {
+        "name": "Alice",
+        "age": "30",
+        "city": "New York"
+    }
+
+-----
+Test Case 3: Correct
+Model Response:
+```json
+{
+    "fruit": "apple",
+    "size": "large",
+    "color": "red"
+}
+```
+malformed json
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red",
+    }
+
+Expected JSON:
+
+    {
+        "fruit": "apple",
+        "size": "large",
+        "color": "red"
+    }
+
+-----
+Test Case 4: Correct
+Model Response:
+```json
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published": 1925
+}
+```
+malformed json
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925,
+
+Expected JSON:
+
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "published": 1925
+    }
+
+-----
+Test Case 5: Correct
+Model Response:
+{
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+malformed json
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco"
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+Expected JSON:
+
+    {
+        "company": "OpenAI",
+        "location": "San Francisco",
+        "products": ["GPT-3", "Codex", "DALL-E"]
+    }
+
+-----
+Test Case 6: Correct
+Model Response:
+{
+    "movie": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010
+}
+
+malformed json
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan"
+        "year": 2010
+    }
+
+Expected JSON:
+
+    {
+        "movie": "Inception",
+        "director": "Christopher Nolan",
+        "year": 2010
+    }
+
+-----
+Test Case 7: Correct
+Model Response:
+```json
+{
+"car": "Tesla",
+"model": "Model S",
+"year": 2022
+}
+```
+malformed json
+
+    {
+        "car": "Tesla",
+        "model": "Model S"
+        "year": 2022,
+
+Expected JSON:
+
+    {
+        "car": "Tesla",
+        "model": "Model S",
+        "year": 2022
+    }
+
+-----
+Test Case 8: Incorrect
+Model Response:
+```json
+{
+"country": "Canada",
+"capital": "Ottawa",
+"population": 37590000
+}
+```
+malformed json
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59,
+
+Expected JSON:
+
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "population": 37.59
+    }
+
+-----
+Test Case 9: Incorrect
+Model Response:
+```json
+{"book": "To Kill a Mockingbird", "author": "Harper Lee", "published": 1960}
+```
+malformed json
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+
+Expected JSON:
+
+    {
+        "book": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "published": "1960"
+    }
+
+-----
+Test Case 10: Correct
+Model Response:
+```json
+{
+"device": "iPhone",
+"manufacturer": "Apple",
+"release_year": 2007
+}
+```
+malformed json
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+
+Expected JSON:
+
+    {
+        "device": "iPhone",
+        "manufacturer": "Apple",
+        "release_year": 2007
+    }
+
+-----
+Overall Accuracy: 70.00% across 10 test cases
+Total Time Taken: 11.67 seconds
+Accuracy for google/gemma-2-9b-it: 70.00%
