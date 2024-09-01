@@ -2,7 +2,7 @@
 
 2.How you created your benchmark test and the rationale behind the design-
 
-1.1)Dataset Collection:Used small sample data which consist of valid json and malformed json.
+1.1)Dataset Collection:Used small sample data which consist of valid json and malformed json.for the test I have used small dataset as there was no specific requirement for the data was mentioned.
 
 1.2)Error Injection:
 
@@ -31,7 +31,7 @@
 
 2.mistralai/Mistral-Nemo-Instruct-2407
   a)Total Time Taken: 7.82 seconds
-  b)Accuracy for mistralai/Mistral-Nemo-Instruct-2407: 80.00%
+  b)Accuracy for mistralai/Mistral-Nemo-Instruct-2407: 100.00%
 
 3.google/gemma-2-27b-it
   a)Total Time Taken: 16.16 seconds
@@ -55,7 +55,8 @@
 5.Instructions to run your code so we can reproduce these tests
   a)I have added code in code.py file in the same code repository just add the Deepinfra API key and run the code.py file as I have added sample data in code itself it will reproduce the result.
 
+Enhancements-
 
-
-
+1.The large data can be used for validation for the scope of this assignment only few test cases are used.
+2.The default values of hyperparameter for each models are used but can use and test with multiple hyperparameter.
 
